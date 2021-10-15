@@ -225,11 +225,11 @@ def live_graph(n_intervals, keyword, user):
             fig.add_annotation(showarrow=True,
                                x=df[df.sentiment == df.sentiment.max()].idxmax().max(),
                                y=df[df.sentiment == df.sentiment.max()].sentiment.max(),
-                               text='Happy 😊', xref='x', yref='y2')
+                               text='Happy :)', xref='x', yref='y2')
             fig.add_annotation(showarrow=True,
                                x=df[df.sentiment == df.sentiment.min()].idxmin().min(),
                                y=df[df.sentiment == df.sentiment.min()].sentiment.min(),
-                               text='Sad 😔', xref='x', yref='y2')
+                               text='Sad :(', xref='x', yref='y2')
         else:
             fig.update_traces({'line': {'width': 4}}, secondary_y=True)
             fig.update_yaxes(title_text='Sentiment', secondary_y=True)
